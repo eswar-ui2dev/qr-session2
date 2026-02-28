@@ -48,15 +48,14 @@ const StudentCheckIn = () => {
       const { data } = await supabase
         .from("classes")
         .select("*")
-        .or(`day_of_week.eq.${today},is_all_day.eq.true`)
+        .eq("day_of_week", today)
         .order("start_time");
       setClasses((data as ClassItem[]) || []);
     };
     fetchClasses();
   }, []);
 
-  const isClassNow = (c: ClassItem & { is_all_day?: boolean }) => {
-    if (c.is_all_day) return true;
+  const isClassNow = (c: ClassItem) => {
     const now = new Date();
     const [sh, sm] = c.start_time.split(":").map(Number);
     const [eh, em] = c.end_time.split(":").map(Number);
