@@ -93,7 +93,6 @@ export type Database = {
           day_of_week: number
           end_time: string
           id: string
-          is_all_day: boolean
           name: string
           section: string
           start_time: string
@@ -105,7 +104,6 @@ export type Database = {
           day_of_week: number
           end_time: string
           id?: string
-          is_all_day?: boolean
           name: string
           section: string
           start_time: string
@@ -117,7 +115,6 @@ export type Database = {
           day_of_week?: number
           end_time?: string
           id?: string
-          is_all_day?: boolean
           name?: string
           section?: string
           start_time?: string
