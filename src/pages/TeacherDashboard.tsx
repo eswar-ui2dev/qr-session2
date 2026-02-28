@@ -19,7 +19,6 @@ interface ClassItem {
   end_time: string;
   strength: number;
   day_of_week: number;
-  is_all_day: boolean;
 }
 
 interface SessionForClass {
@@ -67,7 +66,7 @@ const TeacherDashboard = () => {
         .from("classes")
         .select("*")
         .eq("teacher_id", teacher.id)
-        .or(`day_of_week.eq.${today},is_all_day.eq.true`)
+        .eq("day_of_week", today)
         .order("start_time");
       setClasses((data as ClassItem[]) || []);
     };
@@ -88,7 +87,6 @@ const TeacherDashboard = () => {
   }, [teacher]);
 
   const isClassNow = (c: ClassItem) => {
-    if (c.is_all_day) return true;
     const now = new Date();
     const [sh, sm] = c.start_time.split(":").map(Number);
     const [eh, em] = c.end_time.split(":").map(Number);
