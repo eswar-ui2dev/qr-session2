@@ -12,7 +12,7 @@ const Index = () => {
             <BookOpen className="h-8 w-8 text-primary-foreground" />
           </div>
           <h1 className="text-3xl font-heading font-bold tracking-tight text-foreground">
-
+            AttendEase
           </h1>
           <p className="text-muted-foreground text-sm">
             Smart attendance tracking for modern classrooms
@@ -22,9 +22,9 @@ const Index = () => {
         <div className="space-y-3">
           <button
             onClick={() => navigate("/teacher/login")}
-            className="group flex w-full items-center gap-4 border border-border bg-card p-5 text-left shadow-sm transition-all hover:shadow-md hover:border-primary/30 hover:bg-accent rounded-full">
-
-            <div className="flex h-12 w-12 shrink-0 items-center justify-center bg-primary text-primary-foreground transition-transform group-hover:scale-105 rounded-full">
+            className="group flex w-full items-center gap-4 rounded-2xl border border-border bg-card p-5 text-left shadow-sm transition-all hover:shadow-md hover:border-primary/30 hover:bg-accent"
+          >
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary text-primary-foreground transition-transform group-hover:scale-105">
               <BookOpen className="h-6 w-6" />
             </div>
             <div>
@@ -35,9 +35,9 @@ const Index = () => {
 
           <button
             onClick={() => navigate("/student")}
-            className="group flex w-full items-center gap-4 border border-border bg-card p-5 text-left shadow-sm transition-all hover:shadow-md hover:border-primary/30 hover:bg-accent rounded-full">
-
-            <div className="flex h-12 w-12 shrink-0 items-center justify-center bg-secondary text-secondary-foreground transition-transform group-hover:scale-105 rounded-full">
+            className="group flex w-full items-center gap-4 rounded-2xl border border-border bg-card p-5 text-left shadow-sm transition-all hover:shadow-md hover:border-primary/30 hover:bg-accent"
+          >
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-secondary text-secondary-foreground transition-transform group-hover:scale-105">
               <GraduationCap className="h-6 w-6" />
             </div>
             <div>
@@ -47,8 +47,8 @@ const Index = () => {
           </button>
         </div>
       </div>
-    </div>);
-
+    </div>
+  );
 };
 
 export default Index;
